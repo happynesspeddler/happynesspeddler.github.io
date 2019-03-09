@@ -1,4 +1,202 @@
-@font-face{
-    font-family: myFont;
-    src: url( ../assets/font/2.ttf   )
-}
+.body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  @font-face {
+    font-family: GothamRounded A;
+    src: url("./assets/font/2.ttf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: GothamRounded B;
+    src: url("./assets/fonts/2.ttf") format("opentype");
+  }
+  
+  .btn{
+    width: 240px;
+    background-color: rgb(207, 52, 89);
+    letter-spacing: 0!important;
+    border-radius: 10em!important;
+    padding: 12px 50px!important;
+    color:black!important;
+    border: none!important;
+    margin: 10px;
+  }
+  .btn-second{
+    text-align: center;
+    width: 240px;
+    margin: 10px;
+    text-decoration: none!important;
+    background-color:transparent;
+    letter-spacing: 0!important;
+    border-radius: 10em!important;
+    padding: 12px 50px!important;
+    border: 2px solid white;
+    color:white!important;
+  }
+  .btn-second:hover{
+    border: 2px solid black;
+  }
+  
+  h1 {
+    font-size: 48px !important;
+    font-family: GothamRounded A !important;
+    letter-spacing: 2px;
+  }
+  
+  h3 {
+    font-family: GothamRounded B !important;
+    letter-spacing: 2px;
+  }
+  
+  h4 {
+    font-family: GothamRounded B !important;
+    letter-spacing: 2px;
+  }
+  
+  h5 {
+    font-family: GothamRounded B !important;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    font-size: 1.8em !important;
+    font-family: GothamRounded A !important;
+    letter-spacing: 2px;
+  }
+  
+  p {
+    text-align: justify;
+    font-family: GothamRounded A;
+    letter-spacing: 2px;
+  }
+  
+  a {
+    font-family: GothamRounded A;
+    letter-spacing: 2px;
+    border-bottom: 2px solid transparent;
+  }
+  a:hover {
+    color: black !important;
+    border-bottom: 2px solid black;
+  }
+  
+  #footer {
+  
+    padding: 20px;
+      background-color: #333D47
+    }
+    
+    #footer a {
+      color: black;
+      font-size: 0.8rem
+    }
+  
+    /* bootstrap classes */
+    .dropdown-item {
+      color: black !important;
+      background-color: transparent!important;
+      text-decoration: none;
+    }
+    .dropdown-item:hover {
+      color: black !important;
+      background-color: transparent!important;
+      text-decoration: none;
+      border:none;
+    }
+    .dropdown-item:active {
+      color: black !important;
+      background-color: transparent!important;
+      text-decoration: none;
+    }
+    
+    
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 1px;
+    }
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  
+  .custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+  }
+  .benefit {
+    margin-bottom: 50px;
+    display: flex;
+  }
+  
+  .scrolled {
+    background-color: #0D2237;
+  }
+  
+  .header-text {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 0 3% 0;
+    text-align: center
+  }
+  .header-subText{
+    color:black;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  #headerImage {
+    position: relative;
+    background-image: linear-gradient( rgb(239, 163, 100,0.5),rgb(239, 163, 100,0.5)), url(./assets/images/backHome.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    margin: 0 25px;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .animate:hover{
+    width: 35px;
+    height: 35px;
+  }
+  @media screen and (max-width: 900px) {
+    h1 {
+      font-size: 2em !important;
+    }
+  
+    h2 {
+      font-size: 1em !important;
+    }
+  
+    .benefit {
+      margin-bottom: 50px;
+      display: flex;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .benefit {
+      display: inline;
+      text-align: center;
+    }
+    .header-subText{
+      font-size: 1em;
+    }
+    .header-text{
+      margin: 30% 0 3% 0;
+    }
+    .card-name-person {
+      text-align: center;
+    }
+  
+    .benefit img {
+      height: 100px;
+      width: 100px;
+      margin-right: 0;
+      margin-bottom: 24px
+    }
+  
+  
+  }
