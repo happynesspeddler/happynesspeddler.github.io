@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="src/assets/images/logo.ico" />
+    <title>Happyness Peddler</title>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+
+    <nav class="navbar navbar-expand-lg sticky-top" style="z-index: 10;padding-top:10px ">
+        <a class="navbar-brand" href="/" style="display:flex;width:200px;border:none;color: white">
+            <img src="src/assets/images/balloon.PNG" style="height: 50px; width: 80px;margin:0 40px 0 20px" alt="">
+            <div style="display:flex; align-items:center; position: relative;left: -30px;">
+                <img src="src/assets/images/text.png" style="height: 40px; width: 300px;margin-right: 1vh;" alt="">
+            </div>
+        </a>
+        <button class="custom-toggler navbar-toggler" type="button" id="toggler" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto"
+                style="justify-content: space-between; background-color: #E4A940; border-radius: 50px;padding: 5px 30px">
+                <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
+                    <a class="nav-link" style="color:white;" href="index.html">Home</a>
+                </li>
+                <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
+                    <a class="nav-link" style="color:white" ; href="index.html#about-us">About us</a>
+                </li>
+                <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
+                    <a class="nav-link" style="color:white" ; href="index.html#services">Our Services</a>
+                </li>
+                <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
+                    <a class="nav-link" style="color:white" ; href="index.html#team">Our team</a>
+                </li>
+                <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
+                    <a class="nav-link" style="color:white" ; href="index.html#contact-us">Contact us</a>
+                </li>
+                <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
+                    <a class="nav-link" style="color:white" ; href="index.html">Hall of Fame</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Slider-->
+    <section style="display: flex; position: relative; top:-80px; align-items: center; flex-direction: column">
+            <div style="position: absolute; top:30%; z-index:500">
+                <h1 style="color:white">Creating Safe Places</h1></div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+            style="width: 100%;height:560px;background-color: #524B5B">
+            <div class="container">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" id="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" id="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2" id="2"></li>
+                </ol>
+            </div>
+            <div class="carousel-inner" style="color:white;text-align:center">
+                <div class="carousel-item active">
+                    <div style="height:560px;background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(src/assets/images/1.jpg);
+          background-size: cover; ">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div style="height:560px;background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+           url(src/assets/images/2.jpg);
+          background-size: cover; ">
+                    </div>
+                </div>
+                <div class="carousel-item">
+          <div style="height:560px;background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+           url(src/assets/images/3.jpg);
+          background-size: cover; ">
+          </div>
+        </div>
+
+
+            </div>
+        </div>
+        <div style="width: 100%;height: 300px; display: flex; justify-content: center;flex-direction: column; background-color: #E4A940; 
+    align-items:center;text-align: center">
+            <h2 style="color:white;"> Confused what you're looking for, take this quiz</h2>
+            <a href="index.html" class="btn-second">Quiz</a>
+        </div>
+    </section>
+
+
+    <section
+       id="about-us"
+        style="background-image:url(src/assets/images/back3.jpg);background-size: contain;margin-top:-80px; padding: 20px">
+        <div class="container" style="text-align: center">
+            <h1>About Us</h1>
+            <div class="row">
+                <p style="text-align:center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section 
+    id="services"
+    style="background-color:#E4A940; color: white!important; text-align: center" class="p-4">
+        <div class="container">
+            <h1 style="margin-bottom:50px">Our Service</h1>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p style="text-align:center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>  
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p style="text-align:center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>  
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section
+    id="team"
+        style="background-image:url(src/assets/images/back3.jpg);background-size: contain; text-align: center!important;padding: 20px ">
+        <div class="container">
+                <h1 style="margin-bottom:50px">Our Team</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-sm-12 col-md-6" style="display: flex; justify-content: center ">
+                    <div class="card" style="width: 300px">
+                        <img src="src/assets/images/img_avatar2.png" style="height: 200px" alt="">
+                        <h6>Name</h6>
+                        <h6>Other relevant info</6>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-md-6" style="display: flex; justify-content: center ">
+                    <div class="card" style="width: 300px">
+                        <img src="src/assets/images/img_avatar2.png" style="height: 200px" alt="">
+                        <h6>Name</h6>
+                        <h6>Other relevant info</6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us">
+        <div style="text-align: center; height: 300px;  color: white; background-color:#E4A940 ;
+        justify-content: center; align-items: center;display: flex; flex-direction: column ">
+            <h2 style=" letter-spacing:2px;color: white;font-size:2rem;
+          padding: 2% 2% 2% 2%; text-align: center;
+          margin:0 8% 0 8%; line-height: 1.5
+          ;font-weight: 700;">Information</h2>
+            <a href="sales.html" class="btn-second">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
