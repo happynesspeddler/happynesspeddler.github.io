@@ -102,38 +102,38 @@
 
     <section id="services" style="background-color:#E4A940; color: white!important; text-align: center" class="p-4">
         <div class="container ">
-            <h1 style="margin-bottom:50px">Our Service</h1>
+            <h1 style="margin-bottom:50px">Our Services</h1>
             <div class="row acc">
-                <div class="col-lg-5 col-md-5 col-sm-12 col-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-12">
                     <div style="border: solid 1px #000; margin-bottom: 5%; background-color: #fff">
                         <div style="color:black; text-align:center;display: flex; padding: 10px;cursor: pointer;"
                             id="headingOne">
-                            <i class="fa fa-angle-right" id="holder0" style="margin:2px 40px 0 10px;"></i>
-                            <h6> Corporate Sessions</h6>
+                            <i class="fa fa-angle-right" id="holder0" style="margin:8px 20px 0 10px;"></i>
+                            <p style="font-size:18px; margin-bottom:0!important"> Corporate Sessions</p>
                         </div>
                     </div>
                     <div style="border: solid 1px #000; margin-bottom: 5%; background-color: #fff">
                         <div style="color:black; text-align:center;display: flex; padding: 10px" id="headingTwo">
-                            <i class="fa fa-plus" id="holder1" style="margin:2px 40px 0 10px;"></i>
-                            <h6> School Sessions</h6>
+                            <i class="fa fa-plus" id="holder1" style="margin:8px 20px 0 10px;"></i>
+                            <p style="font-size:18px; margin-bottom:0!important"> School Sessions</p>
                         </div>
                     </div>
                     <div style="border: solid 1px #000; margin-bottom: 5%; background-color: #fff">
                         <div style="color:black; text-align:center;display: flex; padding: 10px" id="headingThree">
-                            <i class="fa fa-plus" id="holder2" style="margin:2px 40px 0 10px;"></i>
-                            <h6> Individual and group therapies</h6>
+                            <i class="fa fa-plus" id="holder2" style="margin:8px 20px 0 10px;"></i>
+                            <p style="font-size:18px; margin-bottom:0!important"> Individual and group therapies</p>
                         </div>
                     </div>
                     <div style="border: solid 1px #000; margin-bottom: 5%; background-color: #fff">
                         <div style="color:black; text-align:center;display: flex; padding: 10px" id="headingFour">
-                            <i class="fa fa-plus" id="holder3" style="margin:2px 40px 0 10px;"></i>
-                            <h6>Support Group</h6>
+                            <i class="fa fa-plus" id="holder3" style="margin:8px 20px 0 10px;"></i>
+                            <p style="font-size:18px; margin-bottom:0!important">Support Group</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-7 col-sm-12 col-12">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                     <div style="border: solid 1px #000; margin-bottom: 5%; background-color: #fff">
-                        <div style="color:black; text-align:center;display: flex; padding: 10px 20px">
+                        <div style="color:black; text-align:center;display: flex; padding: 10px 10px">
                             <div class="container">
                                 <div class="row" id="data-point">
                                     <p class="side-text"> Our
@@ -148,8 +148,8 @@
                                         reflect, and learn to manage their mental health between work and life. We focus
                                         on:</p>
                                 </div>
-                                <div class="row" style="text-align: left">
-                                    <ul id="ul-point">
+                                <div class="row" style="text-align: left;padding: 10px">
+                                    <ul id="ul-point" class="col-lg-6 col-md-6 col-sm-6">
                                         <li>Strategies to prevent
                                             burnout</li>
                                         <li>Individual and
@@ -158,7 +158,10 @@
                                         <li>Competitiveness</li>
                                         <li>Communication</li>
                                     </ul>
-
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <img id="image-services" src="src/assets/images/corporate.jpg"
+                                            style=" width:250px; margin-top:-35px" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -212,14 +215,10 @@
     </section>
 
     <section id="contact-us">
-        <div style="text-align: center; height: 300px;  color: white; background-color:#E4A940 ;
-        justify-content: center; align-items: center;display: flex; flex-direction: column ">
-            <h2 style=" letter-spacing:2px;color: white;font-size:2rem;
-          padding: 2% 2% 2% 2%; text-align: center;
-          margin:0 8% 0 8%; line-height: 1.5
-          ;font-weight: 700;">Information</h2>
-            <a href="sales.html" class="btn-second">Contact Us</a>
-        </div>
+       <div>
+
+
+       </div>
     </section>
 
     <!-- Optional JavaScript -->
@@ -243,7 +242,8 @@
             "<p class=\"side-text\">We provide different modules for group therapies for all age groups.  The sessions are curated focusing on movement and arts-based therapy on different topics. In group therapy, you can share your experiences, learn from and support other people and develop skills for managing mental health concerns on your own.</p>",
             "<p class=\"side-text\">Wanna have your own intimate support group with like-minded people and learn different experiences? meet us every Saturday in central park, CP.</p>"
         ]
-
+        var imageSrc=["src/assets/images/corporate.jpg","src/assets/images/school.jpg","src/assets/images/group.jpg",
+        "src/assets/images/support.jpg"]
         var ulPoint = [
             "<li>Strategies to prevent burnout</li><li>Individual and collective</li><li>Teamwork</li><li>Competitiveness</li><li>Communication</li>",
             "<li>Depression and anxiety</li><li> Avoiding bullying</li><li>Preventing peer pressure and drug abuse</li><li>Building insight and confidence</li>",
@@ -253,6 +253,7 @@
             var helper = function (val) {
                 $('#holder' + holder).removeClass('fa fa-angle-right').addClass('fa fa-plus')
                 $('#holder' + val).removeClass('fa fa-plus').addClass('fa fa-angle-right')
+                $('#image-services').attr('src',imageSrc[val])
                 holder = val
                 $('#data-point').html(dataPoint[val])
                 $('#ul-point').html(ulPoint[val])

@@ -83,6 +83,9 @@ a:hover {
   text-align: justify
 }
 
+#ul-point li{
+  margin-bottom: 15px;
+}
 .notScrolled {
   background-color: transparent;
 }
