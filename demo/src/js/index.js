@@ -31,28 +31,69 @@ if ($('.navbar').length > 0) {
   });
 }
 
-var country_list = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas"
-	,"Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands"
-	,"Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica"
-	,"Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea"
-	,"Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana"
-	,"Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India"
-	,"Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia"
-	,"Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania"
-	,"Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia"
-	,"New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal"
-	,"Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles"
-	,"Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan"
-	,"Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia"
-	,"Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay"
-  ,"Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
- 
-  $( document ).ready(function() {
- 
-    var $value = $('#MERGE7')
-    console.log($value)
-    $.each(country_list,function(index, value){
-          $value.append($('<option />').val(value).text(value))
-    })
-});
+var holder = 0
+        var dataPoint = [
+            "<p class=\"side-text\">Our corporate projects focus on the wider area of work-life rhythm. Why rhythm and not balance? Because we understand that as humans we set for ourselves unrealistic goals to reach equilibrium and call them to balance. Happyness peddler seeks to provide spaces where one can introspect, reflect, and learn to manage their mental health between work and life. We focus on:</p>",
+            "<p class=\"side-text\">We hope to provide education and tools for students to identify early warning signs of mental illness and subsequently provide programs and an environment that supports recovery and improves resilience for these individuals. Assure that those who request information and need mental health care referral have confidential access to the appropriate information and know how to obtain care. We provide awareness and preventive workshops focusing individually on the following topics:</p>",
+            "<p class=\"side-text\">We provide different modules for group therapies for all age groups.  The sessions are curated focusing on movement and arts-based therapy on different topics. In group therapy, you can share your experiences, learn from and support other people and develop skills for managing mental health concerns on your own. In Group therapies we majorly focus on:</p>",
+            "<p class=\"side-text\">Wanna have your own intimate support group with like-minded people and learn different experiences? meet us every Saturday in central park, CP. Our main objective of these support groups will be:</p>"
+        ]
+        var imageSrc = ["src/assets/images/corporate.jpg", "src/assets/images/school.jpg",
+            "src/assets/images/group.jpg",
+            "src/assets/images/support.jpg"
+        ]
+        var ulPoint = [
+            "<li>Strategies to prevent burnout</li><li>Individual and collective</li><li>Teamwork</li><li>Competitiveness</li><li>Communication</li>",
+            "<li>Depression and anxiety</li><li> Avoiding bullying</li><li>Preventing peer pressure and drug abuse</li><li>Building insight and confidence</li>",
+            "<li>Insight Building</li><li>Trust Issues</li><li>Body image issues</li><li>Inter and Intra personal communication</li>",
+            "<li>Emotional and Practical support</li><li>Regular Participation</li><li>Community building</li><li>Sharing and empowerment</li>",
+        ]
+        $(document).ready(function () {
+           $('#supportGroup').click(function(){
+            $('#service_type').val('supportGroup')
+           })
+           $('#onlineSession').click(function(){
+            $('#service_type').val('onlineSession')
+           })
+           $('#submit_complete_message').hide()
+            var helper = function (val) {
+                $('#holder' + holder).removeClass('fa fa-angle-right').addClass('fa fa-plus')
+                $('#holder' + val).removeClass('fa fa-plus').addClass('fa fa-angle-right')
+                $('#image-services').attr('src', imageSrc[val])
+                holder = val
+                $('#data-point').html(dataPoint[val])
+                $('#ul-point').html(ulPoint[val])
+            }
+
+            $("#headingOne").click(function () {
+                helper(0)
+            })
+            $("#headingTwo").click(function () {
+                helper(1)
+            })
+            $("#headingThree").click(function () {
+                helper(2)
+            })
+            $("#headingFour").click(function () {
+                helper(3)
+            })
+            $("form").submit(function (event) {
+                event.preventDefault()
+                var hello = {
+                    "name": $('#name').val(),
+                    "email": $('#email').val(),
+                    "message": $('#message').val()
+                }
+            
+                $('#exampleModal').modal('show')
+                $.post("https://happyness-peddler.firebaseio.com/" + $('#service_type').val() + ".json",
+                    JSON.stringify(hello),
+                    function (data, status) {
+                      $('#exampleModal').modal('hide')
+                      $('#submit_complete_message').fadeIn();
+                      $('.modal-backdrop').remove();
+                      $('#myForm').hide()
+                    });
+            });
+        })
  

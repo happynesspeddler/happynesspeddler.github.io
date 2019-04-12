@@ -16,11 +16,12 @@
     <title>Happyness Peddler</title>
 </head>
 
-<body>
+<body style="background-color: #E4A940;">
 
     <!--Navigation Bar-->
 
-    <nav class="navbar navbar-expand-lg sticky-top" style="z-index: 10;padding-top:10px ">
+    <nav class="navbar navbar-expand-lg sticky-top scrolled"
+        style="z-index: 10;padding-top:10px;background-color: white ">
         <a class="navbar-brand" href="/" style="display:flex;width:200px;border:none;color: white">
             <img src="src/assets/images/balloon.PNG" style="height: 50px; width: 80px;margin:0 40px 0 20px" alt="">
             <div style="display:flex; align-items:center; position: relative;left: -30px;">
@@ -59,21 +60,48 @@
     </nav>
 
     <section id="quiz" style="display:flex;width:100%; align-items: center;flex-direction: column">
+            <ol class="etapier">
+                    <li class="done">1-10</li>
+                    <li class="done">11-20</li>
+                    <li class="done">21-29</li>
+                </ol>
         <div>
             <p id="question" class="question">I don’t feel particularly pleased with the way I am.</p>
         </div>
         <div>
             <form id="myForm" style="display:flex;width:100%;flex-wrap: wrap">
-                <label class="answer"><input type="radio" name="radioName" value="1" /> Strongly disagree</label>
-                <label class="answer"><input type="radio" name="radioName" value="2" /> Moderately disagree </label>
-                <label class="answer"><input type="radio" name="radioName" value="3" /> Slightly disagree </label>
-                <label class="answer"><input type="radio" name="radioName" value="4" /> Slightly agree </label>
-                <label class="answer"><input type="radio" name="radioName" value="5" /> Moderately agree </label>
-                <label class="answer"><input type="radio" name="radioName" value="6" /> Strongly agree </label>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label style="text-align:center; width:100%">Disagree</label>
+                            <div style="display:flex; flex-direction:column">
+                                <label class="answer"><input type="radio" name="radioName" value="1" /> Strongly
+                                </label>
+                                <label class="answer"><input type="radio" name="radioName" value="2" /> Moderately
+                                </label>
+                                <label class="answer"><input type="radio" name="radioName" value="3" /> Slightly
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <label style="text-align:center; width:100%">Agree</label>
+                            <div style="display:flex; flex-direction:column">
+                                <label class="answer"><input type="radio" name="radioName" value="4" /> Slightly
+                                </label>
+                                <label class="answer"><input type="radio" name="radioName" value="5" /> Moderately
+                                </label>
+                                <label class="answer"><input type="radio" name="radioName" value="6" /> Strongly
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </form>
         </div>
     </section>
-    <section style="margin:50px 20px">
+    <section style="margin:50px 20px; display: flex; flex-direction: column; align-items: center;color:white">
         <h4 id="header">Guidelines</h4>
         <div id="guidelines">
             <ul>
@@ -88,7 +116,21 @@
                     the time.</li>
             </ul>
         </div>
-        <div id="interpretation" >
+        <div id="credits">
+            <p style="font-size: 20px">The Oxford Happiness Questionnaire was developed by psychologists <strong>Michael
+                    Argyle</strong> and
+                <span style="font-weight:bold">
+                    Peter Hills
+                </span> at
+                Oxford University.</p>
+
+        </div>
+        <div>
+            <button type="button" id="start" class="btn btn-info">Start</button>
+        </div>
+
+
+        <div id="interpretation">
             <ul>
                 <li>
                     <span style="font-size:20px; font-weight:bold">1-2: </span>
@@ -104,15 +146,15 @@
                 </li>
                 <li>
                     <span style="font-size:20px; font-weight:bold">4: </span>
-                    Somewhat happy or moderately happy. Satisfied. 
+                    Somewhat happy or moderately happy. Satisfied.
                 </li>
                 <li>
                     <span style="font-size:20px; font-weight:bold">4-5: </span>
-                    Rather happy; pretty happy. 
+                    Rather happy; pretty happy.
                 </li>
                 <li>
                     <span style="font-size:20px; font-weight:bold">5-6: </span>
-                     Very happy
+                    Very happy
                 </li>
                 <li>
                     <span style="font-size:20px; font-weight:bold">6: </span>

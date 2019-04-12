@@ -1,16 +1,27 @@
 html{
     scroll-behavior: smooth;
   }
-  .body {
+  body {
     margin: 0;
     padding: 0;
+    font-family: GothamRounded A;
+    
   }
   
   li {
     font-family: GothamRounded A;
     letter-spacing: 2px;
   }
+  label{
+    font-family: GothamRounded A;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
   
+#guidelines ul > li {
+  margin: 10px 0; 
+}
+
   h1 {
     font-size: 48px !important;
     font-family: GothamRounded A !important;
@@ -137,7 +148,9 @@ html{
     font-size: 1.5em;
     text-align: center
   }
+ 
   
+
   @font-face {
     font-family: GothamRounded A;
     src: url("../assets/font/2.ttf") format("opentype");
@@ -210,6 +223,66 @@ html{
     display: block;
     margin-top: 1px;
   }
+  /* CHANGE COLOR HERE */ 
+ol.etapier li.done {
+  border-color: #358596 ;
+}
+/* CHANGE COLOR HERE */ 
+ol.etapier li.done:before {
+    background-color: #358596;
+    border-color: #358596;
+}
+
+
+ol.etapier {
+    display: table;
+    list-style-type: none;
+    margin: 40px auto 20px auto;
+    padding: 0;
+    table-layout: fixed;
+    width: 50%;
+}
+ol.etapier li {
+    display: table-cell;
+    text-align: center;
+	padding-bottom: 10px;
+    white-space: nowrap;
+    position: relative;
+}
+
+ol.etapier li a {
+	color: inherit;
+}
+
+ol.etapier li {
+    color: white; 
+    border-bottom: 10px solid white;
+}
+ol.etapier li.done {
+    color: white;
+}
+
+ol.etapier li:before {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -7.5px;
+    color: white;
+    height: 30px;
+    width: 30px;
+    line-height: 15px;
+    border: 2px solid silver;
+    border-radius: 15px;
+    
+}
+ol.etapier li.done:before {
+    content: "";
+    color: white;
+}
+ol.etapier li.todo:before {
+    content: " " ;
+    background-color: white;
+}
   
   
   .card {
