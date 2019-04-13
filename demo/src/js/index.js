@@ -1,42 +1,42 @@
-var checkForCollpase = false
-$('#toggler').click(function () {
-  var startY = $('.navbar').height() / 6;
-  if (!($(window).scrollTop() > startY)) {
-    if (!checkForCollpase) {
-      checkForCollpase = true
-      $('.navbar').addClass("scrolled");
-    } else {
-      checkForCollpase = false
-      $('.navbar').removeClass("scrolled");
-    }
-  } else {
-    checkForCollpase = true
-  }
-})
+// var checkForCollpase = false
+// $('#toggler').click(function () {
+//   var startY = $('.navbar').height() / 6;
+//   if (!($(window).scrollTop() > startY)) {
+//     if (!checkForCollpase) {
+//       checkForCollpase = true
+//       $('.navbar').addClass("scrolled");
+//     } else {
+//       checkForCollpase = false
+//       $('.navbar').removeClass("scrolled");
+//     }
+//   } else {
+//     checkForCollpase = true
+//   }
+// })
 
-function checkScroll() {
-  var startY = $('.navbar').height() / 6; //The point where the navbar changes in px
-  if ($(window).scrollTop() > startY) {
-    $('.navbar').addClass("scrolled");
-  } else {
-    $('.navbar').removeClass("scrolled");
-    $('#navbarSupportedContent').removeClass('show')
-    checkForCollpase = false
-  }
-}
+// function checkScroll() {
+//   var startY = $('.navbar').height() / 6; //The point where the navbar changes in px
+//   if ($(window).scrollTop() > startY) {
+//     $('.navbar').addClass("scrolled");
+//   } else {
+//     $('.navbar').removeClass("scrolled");
+//     $('#navbarSupportedContent').removeClass('show')
+//     checkForCollpase = false
+//   }
+// }
 
-if ($('.navbar').length > 0) {
-  $(window).on("scroll load resize", function () {
-    checkScroll();
-  });
-}
+// if ($('.navbar').length > 0) {
+//   $(window).on("scroll load resize", function () {
+//     checkScroll();
+//   });
+// }
 
 var holder = 0
         var dataPoint = [
             "<p class=\"side-text\">Our corporate projects focus on the wider area of work-life rhythm. Why rhythm and not balance? Because we understand that as humans we set for ourselves unrealistic goals to reach equilibrium and call them to balance. Happyness peddler seeks to provide spaces where one can introspect, reflect, and learn to manage their mental health between work and life. We focus on:</p>",
             "<p class=\"side-text\">We hope to provide education and tools for students to identify early warning signs of mental illness and subsequently provide programs and an environment that supports recovery and improves resilience for these individuals. Assure that those who request information and need mental health care referral have confidential access to the appropriate information and know how to obtain care. We provide awareness and preventive workshops focusing individually on the following topics:</p>",
             "<p class=\"side-text\">We provide different modules for group therapies for all age groups.  The sessions are curated focusing on movement and arts-based therapy on different topics. In group therapy, you can share your experiences, learn from and support other people and develop skills for managing mental health concerns on your own. In Group therapies we majorly focus on:</p>",
-            "<p class=\"side-text\">Wanna have your own intimate support group with like-minded people and learn different experiences? meet us every Saturday in central park, CP. Our main objective of these support groups will be:</p>"
+            "<p class=\"side-text\">Wanna have your own intimate support group with like-minded people and learn different experiences? meet us every week. Our main objective of these support groups will be:</p>"
         ]
         var imageSrc = ["src/assets/images/corporate.jpg", "src/assets/images/school.jpg",
             "src/assets/images/group.jpg",
