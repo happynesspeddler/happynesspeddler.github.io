@@ -51,8 +51,13 @@ p {
   letter-spacing: 2px;
 }
 
-.navlink a {
+.overall {
+  border: 3px solid black;
+  padding: 20px;
+  margin: 20px
+}
 
+.navlink a {
   /* font-family: 'PT Serif', serif; */
   letter-spacing: 2px;
   border-bottom: 2px solid transparent;
@@ -116,8 +121,6 @@ a:hover {
   margin: 1vh;
 }
 
-
-
 @font-face {
   font-family: 'PT Serif', serif;
   src: url("../assets/fonts/2.ttf") format("opentype");
@@ -136,29 +139,30 @@ a:hover {
   transition: all 0.6s ease-out;
 }
 
-.bottom-nav > li > a{
-
-  color:white;
+.bottom-nav>li>a {
+  color: white;
   font-size: 1.5em;
   margin: 20px;
   text-decoration: none;
 }
+
 .complete {
   font-size: 4em;
-  color:white;
+  color: white;
 }
 
-.answer{
-  margin:10px;
+.answer {
+  margin: 10px;
   font-size: 1.1em;
 }
-.question{
+
+.question {
   font-size: 3em;
-  color:white;
-} 
+  color: white;
+}
+
 .card-home {
   margin: 20px 0;
-
   width: 100%;
   height: 70%;
   display: flex;
@@ -191,8 +195,8 @@ a:hover {
   font-size: 2.5em;
 }
 
-.generic:hover > a >  i{
-color: white!important;
+.generic:hover>a>i {
+  color: white!important;
 }
 
 #footer a {
@@ -232,16 +236,18 @@ color: white!important;
   border-top: 10px solid white;
 }
 
-#footer .generic:hover{
+#footer .generic:hover {
   background-color: #2170C0
 }
 
-#footer .generic:hover::before{
+#footer .generic:hover::before {
   border-bottom-color: #2170C0;
 }
-#footer .generic:hover::after{
+
+#footer .generic:hover::after {
   border-top-color: #2170C0;
 }
+
 .sales {
   display: flex;
   align-items: center;
@@ -276,9 +282,11 @@ color: white!important;
   border: none !important;
   margin: 10px;
 }
-.label{
+
+.label {
   font-size: 1.8em;
 }
+
 .btn-second {
   text-align: center;
   width: 240px;
@@ -315,50 +323,46 @@ color: white!important;
 }
 
 @media screen and (max-width: 900px) {
-
+  .overall {
+    padding: 2px;
+    margin: 20px 4px
+  }
   .complete {
     font-size: 2em;
   }
-  
-  .answer{
+  .answer {
     font-size: 0.8em;
   }
-  .question{
+  .question {
     font-size: 1.5em;
     text-align: center;
-  } 
-
-  .label{
+  }
+  .label {
     font-size: 1.1em;
   }
-  .bottom-nav > li > a{
-    font-size: 0.6em;
+  .bottom-nav>li>a {
+    font-size: 0.5em;
     margin: 10px;
   }
-  .card-home{
+  .card-home {
     font-size: 95%;
   }
   h1 {
     font-size: 2em !important;
   }
-
   .card-name-person {
     font-size: 0.8em;
   }
-
   .card-text {
     font-size: 0.8em
   }
-
   h2 {
     font-size: 1.3em !important;
   }
-
   .slider-text {
     height: 200px;
     font-size: 1.2em;
   }
-
   .slider-text {
     padding: 4% 5% 5% 5%;
   }
@@ -372,7 +376,6 @@ color: white!important;
   text-align: center;
   font-size: 32px
 }
-
 
 .Loader {
   color: #E3A940;
@@ -395,25 +398,18 @@ color: white!important;
   0% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
-
-  5%,
-  95% {
+  5%, 95% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
-
-  10%,
-  59% {
+  10%, 59% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
   }
-
   20% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
   }
-
   38% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
   }
-
   100% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
@@ -423,25 +419,18 @@ color: white!important;
   0% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
-
-  5%,
-  95% {
+  5%, 95% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
-
-  10%,
-  59% {
+  10%, 59% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
   }
-
   20% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
   }
-
   38% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
   }
-
   100% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
@@ -452,7 +441,6 @@ color: white!important;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -464,7 +452,6 @@ color: white!important;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -472,20 +459,16 @@ color: white!important;
 }
 
 @media screen and (max-width: 600px) {
-
   .quotes {
     font-size: 20px
   }
-
   .benefit {
     display: inline;
     text-align: center;
   }
-
   .card-name-person {
     text-align: center;
   }
-
   .benefit img {
     height: 150px;
     width: 150px;

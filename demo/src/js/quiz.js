@@ -31,41 +31,48 @@ var questions = [
 ]
 var answers = []
 var holder = 0
-var reverse = [0, 4, 5, 9, 12, 15, 18, 22, 23, 26, 27, 28]
+var reverse = [0,4,5,9,12,13,18,22,23,26,27,28]
 function getSum(total, num) {
     return total + num;
 }
 $(document).ready(function () {
-    $('#start').click(function () {
-        if ($('#start').text() === 'Start') {
-            $('#guidelines').hide();
-            $('#credits').hide();
-            $('#quiz').show();
-            $('#header').hide()
-            $('#start').text('Next');
-            $('#questionLeft').text("Question: 1/" + questions.length)
-        } else {
-            if (questions.length === answers.length) {
-                $('#question').text("Your Result: " + (answers.reduce(getSum) / 29).toFixed(2))
-                $('#question').addClass('complete')
-                $('#start').hide();
-                $('#myForm').hide();
-                $('#quizValue').show();
-                $('#header').text('Interpreting Results').show();
-                $('#interpretation').show();
-                $('#questionLeft').hide();
-            } else {
-                holder++
-                $('#questionLeft').text("Question: " + (holder + 1) + "/" + questions.length)
-                $('#question').text(questions[holder])
-                $('input[name="radioName"]').prop('checked', false);
-            }
-
+    $('#next').click(function () {
+        if (answers.length === holder) {
+           return;
         }
+        if (questions.length === answers.length) {
+            $('#question').text("Your Result: " + (answers.reduce(getSum) / 29).toFixed(2))
+            $('#question').addClass('complete')
+            $('#start').hide();
+            $('#myForm').hide();
+            $('#quizValue').show();
+            $('#header').text('Interpreting Results').show();
+            $('#interpretation').show();
+            $('#questionLeft').hide();
+            $('#button-next').hide();
+            $('#quizValue').show();
+        } else {
+            holder++
+            $('#questionLeft').text("Question: " + (holder + 1) + "/" + questions.length)
+            $('#question').text(questions[holder])
+            $('input[name="radioName"]').prop('checked', false);
+        }
+
+    })
+
+    $('#start').click(function () {
+        $('#guidelines').hide();
+        $('#credits').hide();
+        $('#quiz').show();
+        $('#header').hide()
+        $('#start').hide();
+        $('#quizValue').hide();
+        $('#button-next').show();
+        $('#questionLeft').text("Question: 1/" + questions.length)
     })
     $('#interpretation').hide();
     $('#quiz').hide();
-
+    $('#button-next').hide();
     $('#myForm input').on('change', function () {
         if ((answers.length - 1) === holder) {
             answers.pop()
