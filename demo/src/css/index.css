@@ -3,56 +3,57 @@ html {
 }
 
 .body {
+  font-family: 'PT Serif', serif;
   margin: 0;
   padding: 0;
 }
 
 li {
-  font-family: GothamRounded A;
+  /* font-family: 'PT Serif', serif; */
   letter-spacing: 2px;
 }
 
 h1 {
   font-size: 48px !important;
-  font-family: GothamRounded A !important;
+  /* font-family: 'PT Serif', serif !important; */
   letter-spacing: 2px;
 }
 
 h5 {
-  font-family: GothamRounded B !important;
+  /* font-family: 'PT Serif', serif !important; */
   letter-spacing: 2px;
 }
 
 h6 {
-  font-family: GothamRounded B !important;
+  /* font-family: 'PT Serif', serif !important; */
   letter-spacing: 2px;
 }
 
 h3 {
-  font-family: GothamRounded B !important;
+  /* font-family: 'PT Serif', serif !important; */
   letter-spacing: 2px;
 }
 
 h4 {
-  font-family: GothamRounded A !important;
+  /* font-family: 'PT Serif', serif !important; */
   letter-spacing: 2px;
 }
 
 h2 {
   font-size: 1.8em !important;
-  font-family: GothamRounded A !important;
+  /* font-family: 'PT Serif', serif !important; */
   letter-spacing: 2px;
 }
 
 p {
   text-align: justify;
-  font-family: GothamRounded A;
+  /* font-family: 'PT Serif', serif; */
   letter-spacing: 2px;
 }
 
 .navlink a {
 
-  font-family: GothamRounded A;
+  /* font-family: 'PT Serif', serif; */
   letter-spacing: 2px;
   border-bottom: 2px solid transparent;
 }
@@ -118,12 +119,12 @@ a:hover {
 
 
 @font-face {
-  font-family: GothamRounded A;
+  font-family: 'PT Serif', serif;
   src: url("../assets/fonts/2.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: GothamRounded B;
+  font-family: 'PT Serif', serif;
   src: url("../assets/fonts/2.ttf") format("opentype");
 }
 
