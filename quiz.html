@@ -7,25 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="src/css/quiz.css">
+    <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="shortcut icon" href="src/assets/images/logo.ico" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
     <title>Happyness Peddler</title>
 </head>
 
-<body style="background-color: #E4A940;">
+<body>
 
     <!--Navigation Bar-->
 
-    <nav class="navbar navbar-expand-lg sticky-top scrolled"
-        style="z-index: 10;padding-top:10px;background-color: white ">
+    <nav class="navbar navbar-expand-lg sticky-top" style="z-index: 10;padding-top:10px;background-color:white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3); " id="navbar">
         <a class="navbar-brand" href="/" style="display:flex;width:200px;border:none;color: white">
-            <img src="src/assets/images/balloon.PNG" style="height: 50px; width: 80px;margin:0 40px 0 20px" alt="">
+            <img src="src/assets/images/balloon.PNG" style="height: 40px; width: 30px;margin:0 30px 0 0px" alt="">
             <div style="display:flex; align-items:center; position: relative;left: -30px;">
-                <img src="src/assets/images/text.png" style="height: 40px; width: 300px;margin-right: 1vh;" alt="">
+                <img src="src/assets/images/text.png" style="height: 40px; width: 175px;margin-top:10px;" alt="">
             </div>
         </a>
         <button class="custom-toggler navbar-toggler" type="button" id="toggler" data-toggle="collapse"
@@ -41,137 +41,191 @@
                     <a class="nav-link" style="color:white;" href="index.html#slider">Home</a>
                 </li>
                 <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
-                    <a class="nav-link" style="color:white" ; href="index.html#about-us">About us</a>
+                    <a class="nav-link" style="color:white" ; href="about-us.html">About us</a>
                 </li>
                 <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
                     <a class="nav-link" style="color:white" ; href="index.html#services">Our Services</a>
                 </li>
                 <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
-                    <a class="nav-link" style="color:white" ; href="index.html#team">Our team</a>
-                </li>
-                <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
                     <a class="nav-link" style="color:white" ; href="index.html#contact-us">Contact us</a>
                 </li>
-                <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
-                    <a class="nav-link" style="color:white" ; href="index.html">Hall of Fame</a>
-                </li>
+                <!-- <li class="nav-item" style="margin: 0 5px; font-size: 1.2em">
+                   <a class="nav-link" style="color:white" ; href="index.html">Hall of Fame</a>
+               </li> -->
             </ul>
         </div>
     </nav>
+    <section class="overall">
+        <section id="quiz" style="display:flex; margin: 50px 20px 0 20px; align-items: center;flex-direction: column;
+     padding: 40px; border-radius: 10px;
+    background-color: #E4A940; color:white">
+            <div>
+                <p id="questionLeft" style="font-size:20px"></p>
+            </div>
+            <div>
+                <p id="question" class="question">I don’t feel particularly pleased with the way I am.</p>
+            </div>
+            <div>
+                <form id="myForm" style="display:flex;width:100%;flex-wrap: wrap">
+                    <div class="container">
 
-    <section id="quiz" style="display:flex;width:100%; align-items: center;flex-direction: column">
-            <ol class="etapier">
-                    <li class="done">1-10</li>
-                    <li class="done">11-20</li>
-                    <li class="done">21-29</li>
-                </ol>
-        <div>
-            <p id="question" class="question">I don’t feel particularly pleased with the way I am.</p>
-        </div>
-        <div>
-            <form id="myForm" style="display:flex;width:100%;flex-wrap: wrap">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <label style="text-align:center; width:100%">Disagree</label>
-                            <div style="display:flex; flex-direction:column">
-                                <label class="answer"><input type="radio" name="radioName" value="1" /> Strongly
-                                </label>
-                                <label class="answer"><input type="radio" name="radioName" value="2" /> Moderately
-                                </label>
-                                <label class="answer"><input type="radio" name="radioName" value="3" /> Slightly
-                                </label>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label class="label" style="text-align:center; width:100%; ">Disagree</label>
+                                <div style="display:flex; flex-direction:column; align-items: center">
+                                    <label class="answer"><input type="radio" name="radioName" value="1" /> Strongly
+                                    </label>
+                                    <label class="answer"><input type="radio" name="radioName" value="2" /> Moderately
+                                    </label>
+                                    <label class="answer"><input type="radio" name="radioName" value="3" /> Slightly
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <label style="text-align:center; width:100%">Agree</label>
-                            <div style="display:flex; flex-direction:column">
-                                <label class="answer"><input type="radio" name="radioName" value="4" /> Slightly
-                                </label>
-                                <label class="answer"><input type="radio" name="radioName" value="5" /> Moderately
-                                </label>
-                                <label class="answer"><input type="radio" name="radioName" value="6" /> Strongly
-                                </label>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label class="label" style="text-align:center; width:100%;">Agree</label>
+                                <div style="display:flex; flex-direction:column;align-items: center">
+                                    <label class="answer"><input type="radio" name="radioName" value="6" /> Strongly
+                                    </label>
+                                    <label class="answer"><input type="radio" name="radioName" value="5" /> Moderately
+                                    </label>
+                                    <label class="answer"><input type="radio" name="radioName" value="4" /> Slightly
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
 
-            </form>
-        </div>
+                </form>
+            </div>
+        </section>
+        <section style="margin:50px 20px; display: flex; flex-direction: column; align-items: center;
+    padding: 20px; border-radius: 10px;
+    color:white;background-color: #E4A940;
+    " id="quizValue">
+            <h4 id="header" style="border-bottom: 2px solid white">Guidelines</h4>
+            <div id="guidelines">
+                <ul>
+                    <li>Please read the statements carefully, some of the questions are phrased positively and others
+                        negatively.</li>
+                    <li>Don’t take too long over individual questions; there are no <span
+                            style="font-weight:700">"right"</span> or <span style="font-weight:700">"wrong"</span>
+                        answers (and
+                        no trick questions).</li>
+                    <li><span style="font-weight:700">The first answer</span> that comes into your head is probably the
+                        right one for you.</li>
+                    <li>If you
+                        find some of the questions difficult, please give the answer that is true for you in general or
+                        for
+                        most of
+                        the time.</li>
+                </ul>
+            </div>
+            <div id="credits">
+                <p style="font-size: 20px">The Oxford Happiness Questionnaire was developed by psychologists
+                    <strong>Michael
+                        Argyle</strong> and
+                    <span style="font-weight:bold">
+                        Peter Hills
+                    </span> at
+                    Oxford University.</p>
+
+            </div>
+            <div>
+                <button type="button" id="start" class="btn btn-info">Start</button>
+            </div>
+
+
+            <div id="interpretation">
+                <ul>
+                    <li>
+                        <span style="font-size:20px; font-weight:bold">1-2: </span>
+                        Not happy.
+                    </li>
+                    <li>
+                        <span style="font-size:20px; font-weight:bold">2‐3: </span>
+                        Somewhat unhappy.
+                    </li>
+                    <li>
+                        <span style="font-size:20px; font-weight:bold">3-4: </span>
+                        Not particularly happy or unhappy
+                    </li>
+                    <li>
+                        <span style="font-size:20px; font-weight:bold">4: </span>
+                        Somewhat happy or moderately happy. Satisfied.
+                    </li>
+                    <li>
+                        <span style="font-size:20px; font-weight:bold">4-5: </span>
+                        Rather happy; pretty happy.
+                    </li>
+                    <li>
+                        <span style="font-size:20px; font-weight:bold">5-6: </span>
+                        Very happy
+                    </li>
+                    <li>
+                        <span style="font-size:20px; font-weight:bold">6: </span>
+                        Too happy
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="button-next" style="display:flex; justify-content:center;margin: 50px">
+            <div>
+                <button type="button" id="next" class="btn btn-info">Next</button>
+            </div>
+        </section>
+
+
     </section>
-    <section style="margin:50px 20px; display: flex; flex-direction: column; align-items: center;color:white">
-        <h4 id="header">Guidelines</h4>
-        <div id="guidelines">
-            <ul>
-                <li>Please read the statements carefully, some of the questions are phrased positively and others
-                    negatively.</li>
-                <li>Don’t take too long over individual questions; there are no “right” or “wrong” answers (and
-                    no trick questions).</li>
-                <li>The first answer that comes into your head is probably the right one for you.</li>
-                <li>If you
-                    find some of the questions difficult, please give the answer that is true for you in general or for
-                    most of
-                    the time.</li>
-            </ul>
-        </div>
-        <div id="credits">
-            <p style="font-size: 20px">The Oxford Happiness Questionnaire was developed by psychologists <strong>Michael
-                    Argyle</strong> and
-                <span style="font-weight:bold">
-                    Peter Hills
-                </span> at
-                Oxford University.</p>
-
-        </div>
-        <div>
-            <button type="button" id="start" class="btn btn-info">Start</button>
-        </div>
+        <section id="footer"
+            style="color: white;display:flex; flex-direction: column; align-items: center; padding: 50px">
+            <div>
+                <ul style="display: flex;list-style-type: none;padding:0!important">
+                    <li class="generic">
+                        <a href="https://twitter.com/shipradhingra5"> <i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="generic">
+                        <a href="https://www.facebook.com/happynesspeddler/"> <i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="generic">
+                        <a href="https://www.instagram.com/happyness_peddler/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="generic">
+                        <a href="https://happynesspeddlers.blogspot.com/?m=1"><i class="fab fa-blogger"></i></a>
+                    </li>
+                </ul>
 
 
-        <div id="interpretation">
-            <ul>
-                <li>
-                    <span style="font-size:20px; font-weight:bold">1-2: </span>
-                    Not happy.
-                </li>
-                <li>
-                    <span style="font-size:20px; font-weight:bold">2‐3: </span>
-                    Somewhat unhappy.
-                </li>
-                <li>
-                    <span style="font-size:20px; font-weight:bold">3-4: </span>
-                    Not particularly happy or unhappy
-                </li>
-                <li>
-                    <span style="font-size:20px; font-weight:bold">4: </span>
-                    Somewhat happy or moderately happy. Satisfied.
-                </li>
-                <li>
-                    <span style="font-size:20px; font-weight:bold">4-5: </span>
-                    Rather happy; pretty happy.
-                </li>
-                <li>
-                    <span style="font-size:20px; font-weight:bold">5-6: </span>
-                    Very happy
-                </li>
-                <li>
-                    <span style="font-size:20px; font-weight:bold">6: </span>
-                    Too happy
-                </li>
-            </ul>
-        </div>
+            </div>
+            <div>
+                <ul class="bottom-nav" style="display: flex;list-style-type: none;padding:0!important">
+                    <li>
+                        <a href="index.html#slider">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#services">Our Services</a>
+                    </li>
+                    <li>
+                        <a href="about-us.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="index.html#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+
+
+            </div>
+
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="src/js/quiz.js"></script>
 </body>
 
