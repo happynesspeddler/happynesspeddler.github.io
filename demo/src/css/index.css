@@ -142,7 +142,19 @@ a:hover {
   margin: 20px;
   text-decoration: none;
 }
+.complete {
+  font-size: 4em;
+  color:white;
+}
 
+.answer{
+  margin:10px;
+  font-size: 1.1em;
+}
+.question{
+  font-size: 3em;
+  color:white;
+} 
 .card-home {
   margin: 20px 0;
 
@@ -263,7 +275,9 @@ color: white!important;
   border: none !important;
   margin: 10px;
 }
-
+.label{
+  font-size: 1.8em;
+}
 .btn-second {
   text-align: center;
   width: 240px;
@@ -301,6 +315,21 @@ color: white!important;
 
 @media screen and (max-width: 900px) {
 
+  .complete {
+    font-size: 2em;
+  }
+  
+  .answer{
+    font-size: 0.8em;
+  }
+  .question{
+    font-size: 1.5em;
+    text-align: center;
+  } 
+
+  .label{
+    font-size: 1.1em;
+  }
   .bottom-nav > li > a{
     font-size: 0.6em;
     margin: 10px;
