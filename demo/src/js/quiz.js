@@ -36,38 +36,45 @@ function getSum(total, num) {
     return total + num;
 }
 $(document).ready(function () {
-    $('#start').click(function(){
-        $('#guidelines').hide();
-        $('#credits').hide();
-        $('#quiz').show();
-        $('#header').hide()
-        $('#quizValue').hide();
-        $('#questionLeft').text("Question: 1/"+questions.length)
+    $('#start').click(function () {
+        if ($('#start').text() === 'Start') {
+            $('#guidelines').hide();
+            $('#credits').hide();
+            $('#quiz').show();
+            $('#header').hide()
+            $('#start').text('Next');
+            $('#questionLeft').text("Question: 1/" + questions.length)
+        } else {
+            if (questions.length === answers.length) {
+                $('#question').text("Your Result: " + (answers.reduce(getSum) / 29).toFixed(2))
+                $('#question').addClass('complete')
+                $('#start').hide();
+                $('#myForm').hide();
+                $('#quizValue').show();
+                $('#header').text('Interpreting Results').show();
+                $('#interpretation').show();
+                $('#questionLeft').hide();
+            } else {
+                holder++
+                $('#questionLeft').text("Question: " + (holder + 1) + "/" + questions.length)
+                $('#question').text(questions[holder])
+                $('input[name="radioName"]').prop('checked', false);
+            }
+
+        }
     })
     $('#interpretation').hide();
     $('#quiz').hide();
-    
+
     $('#myForm input').on('change', function () {
+        if ((answers.length - 1) === holder) {
+            answers.pop()
+        }
         if (reverse.indexOf(holder) > -1) {
             var temp = +$('input[name=radioName]:checked', '#myForm').val()
             answers.push(6 - temp + 1)
-        } else
-            answers.push(+$('input[name=radioName]:checked', '#myForm').val());
-
-        if (questions.length === answers.length) {
-            $('#question').text("Your Result: "+(answers.reduce(getSum) / 29).toFixed(2))
-            $('#question').addClass('complete')
-            $('#start').hide();
-            $('#myForm').hide();
-            $('#quizValue').show();
-            $('#header').text('Interpreting Results').show();
-            $('#interpretation').show();
-            $('#questionLeft').hide();
         } else {
-            holder++
-            $('#questionLeft').text("Question: "+(holder+1)+"/"+questions.length)
-            $('#question').text(questions[holder])
-            $('input[name="radioName"]').prop('checked', false);
+            answers.push(+$('input[name=radioName]:checked', '#myForm').val());
         }
     });
 });
